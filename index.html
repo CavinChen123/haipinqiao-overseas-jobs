@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>海聘桥 | 智能海外招聘平台</title>
+    <meta
+      name="description"
+      content="海聘桥为国内候选人匹配海外工作机会，提供AI岗位推荐、简历优化、雇主一对一聊天和出海求职进度管理。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="海聘桥首页">
+        <span class="brand-mark">HB</span>
+        <span>海聘桥</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#jobs">海外职位</a>
+        <a href="#match">AI匹配</a>
+        <a href="#chat">雇主沟通</a>
+        <a href="#guide">求职服务</a>
+      </nav>
+      <button class="header-cta" type="button" data-open-profile>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20 21a8 8 0 0 0-16 0" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        完善档案
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="heroTitle">
+        <img src="assets/overseas-interview-hero.png" alt="中国候选人与海外雇主进行线上视频面试" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">AI Recruiting for Global Careers</p>
+          <h1 id="heroTitle">海外智能招聘平台</h1>
+          <p class="hero-lead">
+            为国内人才筛选真实海外岗位，智能匹配签证友好雇主，并直接开启一对一沟通。
+          </p>
+          <form class="search-bar" id="searchForm" aria-label="搜索海外职位">
+            <label>
+              <span>目标岗位</span>
+              <input id="keywordInput" type="search" placeholder="产品经理 / 前端 / 数据分析" />
+            </label>
+            <label>
+              <span>目标地区</span>
+              <select id="regionInput">
+                <option value="all">全部地区</option>
+                <option value="Singapore">新加坡</option>
+                <option value="Dubai">迪拜</option>
+                <option value="Berlin">柏林</option>
+                <option value="Toronto">多伦多</option>
+              </select>
+            </label>
+            <button type="submit">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              智能搜索
+            </button>
+          </form>
+        </div>
+        <div class="hero-stats" aria-label="平台数据">
+          <span><strong>3,800+</strong> 海外岗位</span>
+          <span><strong>72h</strong> 平均首次回复</span>
+          <span><strong>41</strong> 签证友好国家/地区</span>
+        </div>
+      </section>
+
+      <section class="section quick-panel" aria-label="求职状态概览">
+        <div class="status-tile">
+          <span class="tile-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg>
+          </span>
+          <div>
+            <strong>岗位可信度筛查</strong>
+            <p>合同、薪资、签证政策多维度预审。</p>
+          </div>
+        </div>
+        <div class="status-tile">
+          <span class="tile-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+            </svg>
+          </span>
+          <div>
+            <strong>双语简历优化</strong>
+            <p>按海外ATS习惯重写项目表达。</p>
+          </div>
+        </div>
+        <div class="status-tile">
+          <span class="tile-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />
+              <path d="M8 9h8" />
+              <path d="M8 13h5" />
+            </svg>
+          </span>
+          <div>
+            <strong>雇主一对一聊天</strong>
+            <p>直接向HR确认远程、搬迁与面试安排。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section jobs-section" id="jobs" aria-labelledby="jobsTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark">Verified Jobs</p>
+            <h2 id="jobsTitle">今日推荐岗位</h2>
+          </div>
+          <div class="filter-group" aria-label="职位筛选">
+            <button class="filter-pill active" type="button" data-filter="all">全部</button>
+            <button class="filter-pill" type="button" data-filter="tech">技术</button>
+            <button class="filter-pill" type="button" data-filter="product">产品</button>
+            <button class="filter-pill" type="button" data-filter="data">数据</button>
+          </div>
+        </div>
+        <div class="job-grid" id="jobGrid"></div>
+      </section>
+
+      <section class="section match-section" id="match" aria-labelledby="matchTitle">
+        <div class="match-copy">
+          <p class="eyebrow dark">AI Match</p>
+          <h2 id="matchTitle">不只是投简历，而是把你放进合适的候选池。</h2>
+          <p>
+            系统会根据语言能力、项目经历、行业迁移度、签证可行性和期望城市，生成岗位匹配分与补强建议。
+          </p>
+          <button class="primary-action" type="button" data-open-profile>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 2v20" />
+              <path d="m17 5-5-3-5 3" />
+              <path d="m17 19-5 3-5-3" />
+              <path d="M2 12h20" />
+            </svg>
+            生成我的匹配报告
+          </button>
+        </div>
+        <div class="match-board" aria-label="AI匹配报告示例">
+          <div class="score-ring">
+            <span>92</span>
+            <small>匹配分</small>
+          </div>
+          <div class="match-list">
+            <div>
+              <span>英文远程协作</span>
+              <strong>优秀</strong>
+            </div>
+            <div>
+              <span>签证友好度</span>
+              <strong>高</strong>
+            </div>
+            <div>
+              <span>薪资提升预估</span>
+              <strong>+38%</strong>
+            </div>
+            <div>
+              <span>建议补强</span>
+              <strong>系统设计案例</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section chat-preview" id="chat" aria-labelledby="chatTitle">
+        <div>
+          <p class="eyebrow dark">Employer Chat</p>
+          <h2 id="chatTitle">和海外雇主先聊清楚，再决定是否投递。</h2>
+        </div>
+        <div class="chat-layout">
+          <div class="conversation-card">
+            <div class="chat-head">
+              <span class="avatar">A</span>
+              <div>
+                <strong>Amara Chen</strong>
+                <p>新加坡金融科技公司 HR</p>
+              </div>
+              <span class="online-dot">在线</span>
+            </div>
+            <div class="bubble employer">
+              你的跨境支付项目经历很贴合，我们可以先聊聊你对新加坡岗位的搬迁时间吗？
+            </div>
+            <div class="bubble candidate">
+              可以。我希望先确认远程试用期和EP办理节奏。
+            </div>
+            <div class="typing" aria-label="雇主正在输入">
+              <i></i><i></i><i></i>
+            </div>
+          </div>
+          <div class="chat-benefits">
+            <p>聊天前系统自动整理你的亮点、薪资期望和可入职时间，避免反复自我介绍。</p>
+            <button class="secondary-action" type="button" data-chat="aurora-pay">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />
+              </svg>
+              打开聊天体验
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section guide-section" id="guide" aria-labelledby="guideTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark">Service Flow</p>
+            <h2 id="guideTitle">从匹配到入职，全流程有人跟进。</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>01</span>
+            <h3>建立出海档案</h3>
+            <p>收集技能、语言、城市偏好、家庭安排与风险边界。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>AI岗位匹配</h3>
+            <p>过滤不靠谱岗位，优先展示签证与薪资信息透明的机会。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>雇主直聊</h3>
+            <p>支持中英双语消息建议，快速确认关键条件。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>面试与Offer协助</h3>
+            <p>准备面试题、薪资谈判和入职资料清单。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="chat-drawer" id="chatDrawer" aria-hidden="true" aria-label="雇主聊天窗口">
+      <div class="drawer-backdrop" data-close-chat></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+        <div class="drawer-header">
+          <div>
+            <p class="eyebrow dark">1-on-1 Chat</p>
+            <h2 id="drawerTitle">雇主直聊</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-chat aria-label="关闭聊天">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="drawer-company" id="drawerCompany"></div>
+        <div class="drawer-messages" id="drawerMessages"></div>
+        <form class="message-form" id="messageForm" aria-label="发送消息">
+          <input id="messageInput" type="text" placeholder="输入想问雇主的问题..." autocomplete="off" />
+          <button type="submit" aria-label="发送消息">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </aside>
+
+    <aside class="profile-modal" id="profileModal" aria-hidden="true" aria-label="候选人档案">
+      <div class="drawer-backdrop" data-close-profile></div>
+      <form class="profile-panel" id="profileForm" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+        <div class="drawer-header">
+          <div>
+            <p class="eyebrow dark">Candidate Profile</p>
+            <h2 id="profileTitle">完善求职档案</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-profile aria-label="关闭档案">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+        <label>
+          <span>你的称呼</span>
+          <input type="text" name="name" placeholder="例如：陈女士" required />
+        </label>
+        <label>
+          <span>目标岗位</span>
+          <input type="text" name="role" placeholder="例如：高级前端工程师" required />
+        </label>
+        <label>
+          <span>期望地区</span>
+          <select name="region" required>
+            <option value="">请选择</option>
+            <option>新加坡</option>
+            <option>欧洲</option>
+            <option>中东</option>
+            <option>北美</option>
+          </select>
+        </label>
+        <label>
+          <span>英文沟通能力</span>
+          <select name="english" required>
+            <option>可工作沟通</option>
+            <option>商务流利</option>
+            <option>需要面试辅导</option>
+          </select>
+        </label>
+        <button class="primary-action full" type="submit">保存并生成推荐</button>
+      </form>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
